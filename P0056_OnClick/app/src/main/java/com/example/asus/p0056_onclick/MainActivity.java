@@ -2,11 +2,13 @@ package com.example.asus.p0056_onclick;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity  {
 
@@ -40,6 +42,9 @@ public class MainActivity extends ActionBarActivity  {
                         break;
 
 
+
+
+
                 }
             }
         };
@@ -51,7 +56,9 @@ public class MainActivity extends ActionBarActivity  {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                button2.setText("Button 4");
+                Toast toast = Toast.makeText(MainActivity.this, "Button number1", Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER, 0,0 );
+                toast.show();
             }
         });
 
