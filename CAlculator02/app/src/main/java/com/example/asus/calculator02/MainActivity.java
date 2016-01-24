@@ -5,20 +5,22 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
+
 import java.util.EnumMap;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements OnClickListener{
 
 
-     private EditText textResult;
+    private EditText textResult;
 
-    private Button btnAdd;
-    private Button btnSubtract;
-    private Button btnMultiply;
-    private Button btnDivide;
+    private static Button btnAdd;
+    private static Button btnSubtract;
+    private static Button btnMultiply;
+    private static Button btnDivide;
 
 
     private OperationType operType;
@@ -28,15 +30,16 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-
-        textResult = (EditText) findViewById(R.id.textResult);
+        textResult = (EditText) findViewById(R.id.editText);
 
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnSubtract = (Button) findViewById(R.id.btnSubtract);
-        btnMultiply = (Button) findViewById(R.id.btnMultyply);
+        btnMultiply = (Button) findViewById(R.id.btnMultiply);
         btnDivide = (Button) findViewById(R.id.btnDivide);
+        btnDivide.setOnClickListener(this);
 
         btnAdd.setTag(OperationType.ADD);
         btnSubtract.setTag(OperationType.SUBTRACT);
@@ -58,7 +61,7 @@ public class MainActivity extends ActionBarActivity {
         switch (v.getId()) {
             case R.id.btnAdd:
             case R.id.btnSubtract:
-            case R.id.btnMultyply:
+            case R.id.btnMultiply:
             case R.id.btnDivide: {
 
                  operType = (OperationType) v.getTag();
@@ -181,5 +184,15 @@ public class MainActivity extends ActionBarActivity {
         return null;
 
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id= v.getId();
+
+        switch (id){
+            case R.id.btnDivide:
+                break;
+        }
     }
 }

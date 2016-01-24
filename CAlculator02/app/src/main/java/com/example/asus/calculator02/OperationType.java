@@ -7,6 +7,6 @@ public enum OperationType {
     ADD,
     SUBTRACT,
     MULTIPLY,
-    operType, operType, DIVIDE
+    DIVIDE
 
 }
