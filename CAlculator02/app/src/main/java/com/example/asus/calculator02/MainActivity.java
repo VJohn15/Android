@@ -3,7 +3,6 @@ package com.example.asus.calculator02;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -17,10 +16,10 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 
     private EditText textResult;
 
-    private static Button btnAdd;
-    private static Button btnSubtract;
-    private static Button btnMultiply;
-    private static Button btnDivide;
+    private  Button btnAdd;
+    private  Button btnSubtract;
+    private  Button btnMultiply;
+    private  Button btnDivide;
 
 
     private OperationType operType;
@@ -190,9 +189,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
     public void onClick(View v) {
         int id= v.getId();
 
-        switch (id){
-            case R.id.btnDivide:
-                break;
+
         }
     }
-}
+
