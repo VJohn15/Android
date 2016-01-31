@@ -51,7 +51,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
     @Override
     public void onClick(View v) {
-       
+
         float num1 = 0;
         float num2 = 0;
         float result = 0;

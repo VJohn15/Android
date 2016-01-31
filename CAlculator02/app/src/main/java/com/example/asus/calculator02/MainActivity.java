@@ -140,7 +140,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
     private double getDouble(Object value){
         double result = 0;
         try {
-            result = Double.valueOf(value.toString().replace(',','.')).doubleValue();
+            result = Double.valueOf(value.toString().replace(',', '.'));
         } catch (Exception ex){
             ex.printStackTrace();
             result = 0;
